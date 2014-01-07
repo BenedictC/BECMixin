@@ -65,7 +65,7 @@
         [applicableMixinProtocols addObjectsFromArray:[self mixinProtocolsConformedToByProtocol:rootProtocol protocolCache:(NSMutableSet *)cache]];
     }
     free(classProtocols);
-//    NSLog(@"%s", class_getName(class));
+
     return applicableMixinProtocols;
 }
 
@@ -93,10 +93,9 @@
         [conformantProtocols insertObject:protocol atIndex:0];
     } else {
         //Protocol is not a mixin. We could cache this to avoid traversing the protocol graph again.
-//        [cache addObject:protocol];
+        [cache addObject:protocol];
     }
 
-    NSLog(@"%s", protocol_getName(protocol));
     return conformantProtocols;
 }
 

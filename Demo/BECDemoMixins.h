@@ -32,5 +32,13 @@
 
 
 
+@protocol BECThirdTestMixin <BECMixin>
+@optional
++(void)hello;
+-(NSDate *)date;
+@end
+
+
+
 @protocol BECUnionMixin <BECSecondTestMixin, BECFirstTestMixin>
 @end

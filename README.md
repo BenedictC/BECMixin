@@ -18,7 +18,7 @@ EG:
     @end
 
 
-    @interface FooMixin : NSObject
+    @interface FooMixin : NSObject //If you want to make life really complicated you can inherit from a different class.
     @end
     
     
@@ -67,12 +67,22 @@ Just like normal protocols mixins can extended. Methods can be overriden when ex
 
 If a mixin defines no methods and only inherits from other mixins then a class does not need to be defined. EG:
 
-    //No need to define a FooBarMixin class.
-    @protocol FooBarMixin <FooMixin, BarMixin>
+    @protocol FooBarMixin <FooMixin, BarMixin> //No need to define a FooBarMixin class.
     @end
-
 
     
 Method implementation precedence
 --
-TODO:
+Method implementation precedence is complicated. The order is determined by the order in which the protocols are listed and their inheritance. In the MegaFooMixin example the foo method of MegaFooMixin had higher precedence than the foo method of FooMixin therefore when the MegaFooMixin is applied to an object the foo implementation will be that of MegaFooMixins. However this can be overridden if the object explicitly conformed to the FooMixin before the MegaFooMixin. EG:
+
+
+@interface AnObject <MegaFooMixin> //Will use foo implementation from MegaFooMixin
+@end
+
+
+@interface AnObject <FooMixin, MegaFooMixin> //Will use foo implementation from FooMixin
+@end
+
+Mixins declared on a class continuation (a.k.a. anonymous category) are applied before those declared on an interface. Mixins declared on categories are ignored.
+
+This ordering is due to the order that the protocols are runtime returns information. Clang nor the runtime documentation mention the ordering of these methods so it is not safe to assume that they will be consistent between releases.

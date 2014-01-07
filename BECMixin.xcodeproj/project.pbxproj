@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31B8B95318609A12003854D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B8B95218609A12003854D9 /* Foundation.framework */; };
+		82867645187C57E600119CB9 /* BECDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 82867644187C57E600119CB9 /* BECDemoObject.m */; };
 		8291058D187A22820038A291 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8291058C187A22820038A291 /* SenTestingKit.framework */; };
 		8291058E187A22820038A291 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B8B95218609A12003854D9 /* Foundation.framework */; };
 		829105A7187C2C380038A291 /* BECMixin.m in Sources */ = {isa = PBXBuildFile; fileRef = 829105A1187C2C380038A291 /* BECMixin.m */; };
@@ -42,6 +43,8 @@
 /* Begin PBXFileReference section */
 		31B8B94F18609A12003854D9 /* Demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Demo; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B8B95218609A12003854D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		82867643187C57E600119CB9 /* BECDemoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BECDemoObject.h; sourceTree = "<group>"; };
+		82867644187C57E600119CB9 /* BECDemoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BECDemoObject.m; sourceTree = "<group>"; };
 		8291058B187A22820038A291 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8291058C187A22820038A291 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		829105A0187C2C380038A291 /* BECMixin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BECMixin.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 			children = (
 				829105AB187C2CE40038A291 /* BECDemoMixins.h */,
 				829105AC187C2CE40038A291 /* BECDemoMixins.m */,
+				82867643187C57E600119CB9 /* BECDemoObject.h */,
+				82867644187C57E600119CB9 /* BECDemoObject.m */,
 				829105AE187C2CE40038A291 /* main.m */,
 				829105BC187C2D770038A291 /* Support Files */,
 			);
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82867645187C57E600119CB9 /* BECDemoObject.m in Sources */,
 				829105A7187C2C380038A291 /* BECMixin.m in Sources */,
 				829105B0187C2CE40038A291 /* main.m in Sources */,
 				829105AF187C2CE40038A291 /* BECDemoMixins.m in Sources */,

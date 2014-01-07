@@ -54,3 +54,26 @@
 }
 
 @end
+
+
+
+@interface BECThirdTestMixin : NSObject
+@end
+
+
+
+@implementation BECThirdTestMixin
+
++(void)hello
+{
+    NSLog(@"%s: %@", __FUNCTION__, self);
+}
+
+
+
+-(NSDate *)date
+{
+    return [NSDate date];
+}
+
+@end

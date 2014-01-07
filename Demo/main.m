@@ -7,21 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BECDemoMixins.h"
+
+#import "BECDemoObject.h"
 
 
-
-@interface BECObject : NSObject <BECUnionMixin>
-@end
-
-@implementation BECObject
-
--(NSString *)message
-{
-    return [@"Hello from " stringByAppendingString:NSStringFromClass([self class])];
-}
-
-@end
 
 
 
@@ -29,9 +18,9 @@ int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        [BECObject hello];
-        [[BECObject new] constantMessage];
-        [[BECObject new] customMessage];
+        [BECDemoObject hello];
+        [[BECDemoObject new] constantMessage];
+        [[BECDemoObject new] customMessage];
     }
     return 0;
 }
