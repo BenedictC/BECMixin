@@ -76,12 +76,12 @@ Method implementation precedence
 Method implementation precedence is complicated. The order is determined by the order in which the protocols are listed and their inheritance. In the MegaFooMixin example the foo method of MegaFooMixin had higher precedence than the foo method of FooMixin therefore when the MegaFooMixin is applied to an object the foo implementation will be that of MegaFooMixins. However this can be overridden if the object explicitly conformed to the FooMixin before the MegaFooMixin. EG:
 
 
-@interface AnObject <MegaFooMixin> //Will use foo implementation from MegaFooMixin
-@end
+    @interface AnObject <MegaFooMixin> //Will use foo implementation from MegaFooMixin
+    @end
 
 
-@interface AnObject <FooMixin, MegaFooMixin> //Will use foo implementation from FooMixin
-@end
+    @interface AnObject <FooMixin, MegaFooMixin> //Will use foo implementation from FooMixin
+    @end
 
 Mixins declared on a class continuation (a.k.a. anonymous category) are applied before those declared on an interface. Mixins declared on categories are ignored.
 
